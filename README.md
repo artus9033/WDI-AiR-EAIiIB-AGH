@@ -12,11 +12,6 @@ Kilka reguł dotyczących obsługi repo:
 - Zachęca się do zgłaszania nowych rozwiązań poprzez pull requesty i komentowanie/ocenianie ich przed ewentualnym merge.
 
 ### Informacje techniczne
-Dla osób nieznających systemu kontroli wersji GIT, należy skorzystać z narzędzia `git` dostępnego do pobrania [tutaj](https://git-scm.com/downloads).
+Dla osób nieznających systemu kontroli wersji GIT, należy skorzystać z narzędzia `git`, dostępnego do pobrania [tutaj](https://git-scm.com/downloads), oraz jego dokumentacji.
 
-Aby pierwszy raz utworzyć lokalną kopię repo, należy wykonać komendę `git clone https://github.com/artus9033/WDI-AiR-AGH-2019`.
-
-Każda zmiana w plikach repozytorium, którą chcemy zatwierdzić, może zostać wykonana w następujący sposób:
-* Należy dodać odpowiednie pliki:
-    * Aby dodać wszystkie zmienione pliki w katalogu, należy wykonać `git add .`
-    * Aby dodać wybrane zmienione pliki, należy wykonać `git add [relatywna ścieżka do pliku]`
+Aby sklonować repozytorium, wprowadzić zmiany i stworzyć Pull Request, można skorzystać np. z [tego](https://www.thinkful.com/learn/github-pull-request-tutorial/#Time-to-Submit-Your-First-PR) tutoriala.
