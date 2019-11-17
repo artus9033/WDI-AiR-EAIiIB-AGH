@@ -1,2 +1,22 @@
 # WDI-AiR-AGH-2019
-Jak będzie na WDI - sekcja O(n!)
+
+> Jak będzie na WDI AiR - sekcja O(n!)
+
+### Celem tego repo jest umieszczanie rozwiązań z _WDI z 2019_ od dr inż. Pawlika.
+
+Kilka reguł dotyczących obsługi repo:
+
+- Zadania z danego tematu `TematXX`, gdzie `XX` to nr zestawu, umieszczamy w katalogu o tejże nazwie.
+- Rozwiązanie do danego zadania należy umieścić w pliku `<nazwa zadania>.py`, z ewentualnym dopiskiem, jeśli jest to kompletnie inna wersja rozwiązania danego problemu (podobne rozwiązania można ulepszać, modyfikować itd. poprzez PRy)
+- Wszystkie nazwy plików powinny być zgodne z konwencją [snakeCase](https://en.wikipedia.org/wiki/Snake_case)
+- Zachęca się do zgłaszania nowych rozwiązań poprzez pull requesty i komentowanie/ocenianie ich przed ewentualnym merge.
+
+### Informacje techniczne
+Dla osób nieznających systemu kontroli wersji GIT, należy skorzystać z narzędzia `git` dostępnego do pobrania [tutaj](https://git-scm.com/downloads).
+
+Aby pierwszy raz utworzyć lokalną kopię repo, należy wykonać komendę `git clone https://github.com/artus9033/WDI-AiR-AGH-2019`.
+
+Każda zmiana w plikach repozytorium, którą chcemy zatwierdzić, może zostać wykonana w następujący sposób:
+* Należy dodać odpowiednie pliki:
+    * Aby dodać wszystkie zmienione pliki w katalogu, należy wykonać `git add .`
+    * Aby dodać wybrane zmienione pliki, należy wykonać `git add [relatywna ścieżka do pliku]`
