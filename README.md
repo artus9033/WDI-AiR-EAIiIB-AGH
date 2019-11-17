@@ -6,10 +6,10 @@
 
 Kilka reguł dotyczących obsługi repo:
 
-- Zadania z danego tematu `TematXX`, gdzie `XX` to nr zestawu, umieszczamy w katalogu o tejże nazwie.
+- Zadania z danego tematu `tematX`, gdzie `X` to nr zestawu, umieszczamy w katalogu o tejże nazwie
 - Rozwiązanie do danego zadania należy umieścić w pliku `<nazwa zadania>.py`, z ewentualnym dopiskiem, jeśli jest to kompletnie inna wersja rozwiązania danego problemu (podobne rozwiązania można ulepszać, modyfikować itd. poprzez PRy)
 - Wszystkie nazwy plików powinny być zgodne z konwencją [snakeCase](https://en.wikipedia.org/wiki/Snake_case)
-- Zachęca się do zgłaszania nowych rozwiązań poprzez pull requesty i komentowanie/ocenianie ich przed ewentualnym merge.
+- Zachęca się do zgłaszania nowych rozwiązań poprzez pull requesty i komentowanie/ocenianie ich przed ewentualnym merge
 
 ### Informacje techniczne
 Dla osób nieznających systemu kontroli wersji GIT, należy skorzystać z narzędzia `git`, dostępnego do pobrania [tutaj](https://git-scm.com/downloads), oraz jego dokumentacji.
