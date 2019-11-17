@@ -8,7 +8,7 @@ Kilka reguł dotyczących obsługi repo:
 
 - Zadania z danego tematu `tematX`, gdzie `X` to nr zestawu, umieszczamy w katalogu o tejże nazwie
 - Rozwiązanie do danego zadania należy umieścić w pliku `<nazwa zadania>.py`, z ewentualnym dopiskiem, jeśli jest to kompletnie inna wersja rozwiązania danego problemu (podobne rozwiązania można ulepszać, modyfikować itd. poprzez PRy)
-- Wszystkie nazwy plików powinny być zgodne z konwencją [snakeCase](https://en.wikipedia.org/wiki/Snake_case)
+- Wszystkie nazwy plików powinny być zgodne z konwencją [camelCase](https://pl.wikipedia.org/wiki/CamelCase)
 - Zachęca się do zgłaszania nowych rozwiązań poprzez pull requesty i komentowanie/ocenianie ich przed ewentualnym merge
 
 ### Informacje techniczne
