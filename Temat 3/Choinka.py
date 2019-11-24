@@ -5,9 +5,3 @@ for current_row in range(1, rows + 1):
     for _ in range(2 * current_row - 1):
         print("*", end="")
     print("")
-
-
-
-
-
-
