@@ -12,5 +12,3 @@ def convert(roman_number):
             result += rzym[roman_number[p]]
             p += 1
     return result
-
-
