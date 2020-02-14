@@ -4,15 +4,16 @@
 
 int main()
 {
-    double x=0;
+    double x = 0;
+    
     do
     {
-        scanf("%lf",&x);
-        printf("%lf",sqrt(x));
+        scanf("%lf", &x);
+        printf("%lf", sqrt(x));
         printf("\n");
 
     }
-    while(x!=0.0 && x!=1.0);
+    while(x != 0.0 && x != 1.0);
     
     return 0;
 }
