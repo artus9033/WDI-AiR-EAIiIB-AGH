@@ -1,127 +1,115 @@
-//dziala, ale mogloby byc to lepiej napisane
-#include <stdlib.h>
 #include <stdio.h>
-#define SIZE 10
-struct wpis
+#include <stdlib.h>
+
+#define ROZW_NADOBOWIAZKOWE 1
+
+struct Kontakt
 {
-    char Fname[30];
-    char Sname[30];
-    long int phone_nr;
+    char imie[30];
+    char nazwisko[30];
+    long int numer;
 };
-struct baza
+
+struct Baza
 {
-    int max_size;
-    int act_size;
-    struct wpis *tab;
+    int maks = 10;
+    struct Kontakt *tab = (struct Kontakt *)malloc(sizeof(struct Kontakt) * this->maks);
+    int aktualna = 0;
 };
-int dodaj(struct baza *a_bazy, struct wpis *a_wpisu)
+
+int dodaj(struct Baza *adrBazy, struct Kontakt *adrKontaktu)
 {
-    if (a_bazy->act_size < a_bazy->max_size)
+    // obsługa przepełnienia
+    if (adrBazy->aktualna + 1 == adrBazy->maks)
     {
-        a_bazy->tab[a_bazy->act_size] = *a_wpisu;
-        a_bazy->act_size++;
-        return 0;
-    }
-    return -1;
-}
-/*
-int dodaj2(struct baza *a_bazy, struct wpis *a_wpisu)
-{
-    if(a_bazy->act_size<a_bazy->max_size)
-    {
-        a_bazy->tab[a_bazy->act_size]=*a_wpisu;
-        a_bazy->act_size++;
-        return 0;
-    }
-    else
-    {
-         //fputs("%i \n",a_bazy, stdout);
-         printf("%i \n",a_bazy->tab);
-        struct wpis* tab2=realloc(a_bazy->tab,SIZE*sizeof(struct wpis));
-        // fputs("2 \n", stdout);
-        if (tab2==NULL) return -1;
-        a_bazy->tab=tab2;
-        a_bazy->max_size+=SIZE;
-        printf("%i \n",a_bazy->tab);
-        //dodaj2(a_bazy, a_wpisu);
-        // fputs("3 \n", stdout);
-    }
-    return -1;
-}
-*/
-int dodaj2(struct baza *a_bazy, struct wpis *a_wpisu)
-{
-    if (a_bazy->act_size < a_bazy->max_size)
-    {
-        a_bazy->tab[a_bazy->act_size] = *a_wpisu;
-        a_bazy->act_size++;
-        return 0;
-    }
-    else //z jakiegoś powodu ten else nie dziala tak jak powinien
-    {
-        //fputs("%i \n",a_bazy, stdout);
-        printf("%i \n", a_bazy->tab);
-        struct wpis *tab2 = malloc(SIZE * sizeof(struct wpis));
-        // fputs("2 \n", stdout);
-        if (tab2 == NULL)
-            return -1;
-        for (int i = 0; i < a_bazy->act_size; i++)
+#if ROZW_NADOBOWIAZKOWE
+        adrBazy->maks += 10;
+        adrBazy->tab = (struct Kontakt *)realloc(adrBazy->tab, sizeof(struct Kontakt *) * adrBazy->maks);
+
+        if (adrBazy->tab == NULL)
         {
-            tab2[i] = a_bazy->tab[i];
+            return -1;
         }
-        a_bazy->tab = tab2;
-        a_bazy->max_size += SIZE;
-        printf("%i \n", a_bazy->tab);
-        //dodaj2(a_bazy, a_wpisu);
-        // fputs("3 \n", stdout);
+#else
+        return -1;
+#endif
     }
-    return -1;
+
+    // skopiowanie wartości elementu na koniec bazy i inkrementacja licznika elementów w bazie
+    *(adrBazy->tab + adrBazy->aktualna) = *adrKontaktu;
+    adrBazy->aktualna++;
+
+    // zwracam indeks dodanego elementu w tablicy
+    return adrBazy->aktualna;
 }
-struct baza usun(struct baza par_baza, int indeks)
+
+struct Baza usun(struct Baza bkpBaza, int indeks)
 {
-    par_baza.act_size--;
-    for (int i = indeks; i < par_baza.act_size; i++)
+    if (indeks < 0 || indeks > bkpBaza.aktualna)
     {
-        par_baza.tab[i] = par_baza.tab[i + 1];
+        printf("Indeks poza granicami!\n");
+
+        return bkpBaza;
     }
-    return par_baza;
+
+    int ct = indeks;
+
+    for (int i = ct + 1; ct < bkpBaza.aktualna; ct++)
+    {
+        *(bkpBaza.tab + i - 1) = *(bkpBaza.tab + i);
+    }
+
+    bkpBaza.aktualna--;
+
+    return bkpBaza;
 }
-void b_print(struct baza par_baza)
+
+void wypisz(struct Baza b)
 {
-    for (int i = 0; i < par_baza.act_size; i++)
+    for (int i = 0; i < b.aktualna; i++)
     {
-        puts(par_baza.tab[i].Fname);
-        printf(" ");
-        puts(par_baza.tab[i].Sname);
-        printf(" ");
-        printf("%li", par_baza.tab[i].phone_nr);
-        printf("\n");
+        printf("%s, %s , %ld \n", b.tab[i].imie, b.tab[i].nazwisko, b.tab[i].numer);
     }
 }
+
 int main()
 {
-    struct baza b;
-    b.tab = malloc(SIZE * sizeof(struct wpis));
-    if (b.tab != NULL)
+    struct Baza b;
+    struct Kontakt abonent = {"Piotr", "Pawlik", 123456789L};
+
+    dodaj(&b, &abonent);
+
+    int indeks1;
+    int operacja = 1;
+    while (operacja != 0)
     {
-        b.max_size = SIZE;
-        b.act_size = 0;
-        struct wpis w1 = {
-            .phone_nr = 123456789,
-            .Fname = "Pan",
-            .Sname = "S"};
-        struct wpis w2 = {
-            .phone_nr = 234567890,
-            .Fname = "Pan2",
-            .Sname = "S2"};
-        for (int i = 0; i < 11; i++)
-            dodaj2(&b, &w1);
-        dodaj2(&b, &w2);
-        b_print(b);
-        b = usun(b, 0);
-        printf("\n");
-        b_print(b);
-        free(b.tab);
-    }
-    return 0;
+        printf("Co mam zrobić? (1 - wypisanie, 2 - dodawanie, 3 - usuwanie, 0 - koniec)\n");
+        scanf("%d", &operacja);
+        switch (operacja)
+        {
+        case 0:
+            return 0;
+        case 1:
+            wypisz(b);
+            break;
+        case 2:
+            printf("Wprowadź dane\n");
+            printf("> Imię: ");
+            scanf("%s", abonent.imie);
+            printf("> Nazwisko: ");
+            scanf("%s", abonent.nazwisko);
+            printf("> Numer tel:");
+            scanf("%ld", &abonent.numer);
+            dodaj(&b, &abonent);
+            break;
+        case 3:
+            printf("Podaj indeks, który mam usunąć: ");
+            scanf("%d", &indeks1);
+            b = usun(b, indeks1);
+            break;
+        default:
+            printf("Błędna opcja!\n");
+            break;
+        }
+    };
 }
