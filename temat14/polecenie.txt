@@ -1,0 +1,121 @@
+Zadanie 1
+
+Przy pomocy struktur zaimplementować prostą 'bazę danych' - książkę telefoniczną, przechowywaną  w pamięci komputera,  wykorzystującą tablicę struktur. Niech pojedynczy wpis opisuje typ strukturalny zawierający: Imię, Nazwisko jako napisy 30-to elementowe (tablice tworzone statycznie, a nie wskaźniki) oraz Numer telefonu jako liczba typu long. Sama baza ma być zaimplementowana jako drugi typ strukturalny z trzema polami: maksymalna i aktualna liczba rekordów w bazie oraz wskaźnik na  pojedynczy wpis (rozumiany jako dynamiczna tablica struktur).
+
+Program musi pozwalać (poprzez funkcje) na dodanie, usunięcie i przeglądanie wpisów. Dane powinny być przechowywane w tablicy dynamicznej. Należy napisać funkcje:
+
+- wypisującą zawartość tablicy (parametrem może być zmienna reprezentująca bazę)
+
+- dodającą do tablicy jeden rekord na koniec bazy  - baza oraz dodawany rekord mają zostać przekazane przez adres. Jeżeli zostanie przekroczona maksymalna liczba rekordów należy:
+
+w wariancie obowiązkowym zwrócić -1.
+ w wariancie nadobowiązkowym przeprowadzić realokację dodając do tablicy 10 kolejnych elementów. Można użyć realloc. W razie niepowodzenia alokacji funkcja zwraca -1 (ale proszę zachować 'starą' tablicę - nie zwalniać jej).
+- oraz funkcję usuwającą rekord o podanym indeksie poprzez przesunięcie o 1 w lewo kolejnych elementów tablicy - baza ma zostać przekazana przez wartość.  Zakładamy, że podanie indeksu spoza zakresu nie wywołuje żadnej reakcji (nic nie jest usuwane).
+
+W programie nie wolno używać zmiennych globalnych!
+
+
+Używając wskaźnika na strukturę proszę o notację ze strzałką, a  nie z kropką - czyli nie (*adr_struct).field tylko adr_struct->filed
+
+Przykładowa struktura opisująca bazę:
+
+struct baza {
+
+  int max_size;
+
+ int act_size;
+
+ struct wpis *tab;
+
+};
+
+Przykładowy nagłówek funkcji dodającej:
+
+int dodaj( struct baza *a_bazy, struct wpis *a_wpisu);
+
+gdzie a_bazy to adres zmiennej przechowującej informacje o bazie (np. b z poniższego szablonu),
+
+a a_wpisu to adres pomocniczej zmiennej, wypełnianej w main z klawiatury danymi, które funkcja ma przepisać do tablicy w pierwsze wolne miejsce.
+
+ 
+
+Przykładowy nagłówek funkcji usuwającej:
+
+struct baza usun( struct baza par_baza, int indeks);
+
+gdzie par_baza to kopia zmiennej przechowującej informacje o bazie (np. kopia b z poniższego przykładu),
+
+a indeks to numer elementu do usunięcia.
+
+W main można wykorzystać poniższy szablon:
+
+void main () { 
+
+-----PRZYKŁADOWE UTWORZENIE ZMIENNEJ REPREZENTUJĄCEJ BAZĘ
+struct baza b;
+b.max_size=SIZE;
+b.act_size=0;
+b.tab = malloc(SIZE*....
+ 
+-----PRZYKŁADOWE UTWORZENIE i WYPEŁNIENIE ZMIENNEJ ZAWIERAJĄCEJ DANE O ABONENCIE (w celach testowych, potem proszę wypełniać danymi z klawiatury)
+-----ORAZ WPISANIE ZAWARTOŚCI TEJ ZMIENNEJ DO TABLICY
+struct wpis abonent={"Piotr", "Pawlik", 123456789L};
+b.tab[0]=abonent;
+b.act_size++;
+
+-----------------------
+int operacja = 0;
+ do { 
+   printf("Co mam zrobić? (1 - wypisanie, 2 - dodawanie, 3 - usuwanie, 0 - koniec)\n");
+   scanf("%d", &operacja);
+   switch(operacja) {
+      case 1: 
+ ---- WYWOŁANIE FUNKCJI WYPISYWANIA ----
+       break; 
+      case 2: 
+ ---- POBRANIE DANYCH Z KLAWIATURY I  WYWOŁANIE FUNKCJI DODAWANIA ----
+        break;
+      case 3: 
+ ----  WYWOŁANIE FUNKCJI USUWANIA ----
+        break;
+      }
+   } while(operacja != 0);
+ }
+UWAGA:
+
+Jednoczesne używanie fgets i scanf może skutkować problemem pozostawania 'połówki entera' w buforze klawiatury. Jeżeli wczytywanie imienia będzie pomijane przez Państwa program, proszę dopisać getchar();  po scanf("%d",&operacja);
+
+
+
+
+Zadanie 2
+
+Zaimplementować listę jednokierunkową zawierającą dane osobowe :imię, nazwisko, rok urodzenia. Dane osobowe mają być zdefiniowane w osobnej strukturze. Typ strukturalny opisujący element listy ma zawierać strukturę z danymi osobowymi oraz  pole wskaźnikowe  "na siebie samego".
+
+Program musi zawierać funkcje realizujące następujące operacje:
+* wypisywanie listy   (proponowany nagłówek: void printList(struct list *head);)
+
+* dodawanie nowego elementu na początku listy (proponowany nagłówek: struct list * addList(struct list *head); dla funkcji, która pobierze dane z klawiatury lub lepiej, lecz dłużej: struct list * addList(struct list *head, struct dane *a_wpis ); dla funkcji która otrzyma a_wpis - adres zmiennej wypełnionej w mainie)
+
+* usuwanie elementu z początku listy    (proponowany nagłówek: void deleteElem(struct list **head);)
+
+* usuwanie całej listy (zwalnianie pamięci). (proponowany nagłówek: void deleteList(struct list **head);)
+
+Ponadto:
+
+* dodawanie nowego elementu na końcu listy
+
+* wyszukiwanie elementów wg. roku urodzenia,
+
+* dodawanie nowego elementu w dowolnym miejscu listy (za wyszukanym)
+
+* usuwanie elementu z końca listy
+
+* usuwanie elementu z dowolnego miejsca listy (wyszukanego)
+
+
+W programie proszę nie używać zmiennych globalnych.
+
+Proszę w programie użyć dwóch sposobów zwracania "nowej głowy" przez funkcje dodającą i usuwającą - jedna z nich niech zwraca przez return a druga przez adres (kolejność dowolna).
+
+Proszę w jakiś sposób uwzględnić fakt, że jeżeli alokacja się nie powiedzie to wtedy coś trzeba zrobić z dotychczasową listą.

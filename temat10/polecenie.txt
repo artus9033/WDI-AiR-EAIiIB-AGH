@@ -1,0 +1,32 @@
+1. Pierwiastki równania  kwadratowego (O)
+
+Napisz funkcję obliczającą rzeczywiste pierwiastki równania  kwadratowego. W main wprowadź z klawiatury współczynniki a,b,c równania postaci
+
+ax2+bx+c = 0
+
+zawołaj napisaną funkcję i  wypisz rozwiązania tego równania.  Funkcja ma zwracać (przez return) liczbę znalezionych miejsc zerowych. Ponadto, oprócz parametrów a, b, i c funkcja ma mieć dwa dodatkowe parametry wyjściowe - wskaźniki otrzymujące adresy zmiennych pod które funkcja będzie 'wrzucać' znalezione pierwiastki. Przypominam, że nie wolno używać zmiennych globalnych. Zmienne przechowujące pierwiastki powinny być typu rzeczywistego.
+
+
+2. Odwracanie tablicy (O)
+
+Napisz funkcję otrzymującą tablicę liczb rzeczywistych oraz adres ostatniego elementu tej tablicy (czyli parametrami funkcji są dwa wskaźniki). W funkcji -  używając wyłącznie dwóch parametrów oraz jednej zmiennej pomocniczej  odwróć tablicę 'w miejscu' tzn bez użycia drugiej tablicy. Funkcja nic nie zwraca.  W programie main zdefiniuj 10-cio elementową tablicę liczb rzeczywistych typu, odwróć ją za pomocą napisanej funkcji i wypisz po odwróceniu.
+
+3. Tablica napisów
+
+Dana jest tablica napisów: char *tab[5] = {"Kot ma Ale", "Ala ma kota", "Ola ma psa", "Pies ma pchly", "Ala nie lubi Oli"};
+Napisz funkcję sortującą dowolną tablicę napisów wg alfabetu (zakładamy, że nie  używamy polskich liter).  Przy sortowaniu można wykorzystać funkcję strcmp(char *s1, char *s2) (zadeklarowaną w string.h), która zwraca wartość zero, gdy s1 jest takie same jak s2, mniejszą od zero gdy str1 < str2 oraz większą od zero gdy str1 > str2. Tablica ma być sortowana 'w miejscu' (bez użycia tablicy pomocniczej). Funkcja ma mieć dwa parametry - tablicę i jej rozmiar  i nie ma nic zwracać.
+
+Do wypisania tablicy mozna wykorzystać funkcję puts o deklaracji, wypisującą podany napis na ekranie:
+
+int puts(char *s);
+
+4. Całka
+Napisz funkcję wyliczającą całkę podanej funkcji w podanym przedziale. Funkcja  ma mieć jako parametry funkcję f (otrzymującą wartość typu double i zwracającą wynik tego samego typu), punkty poczatkowy (x0) i końcowy (x1)przedziału oraz przyrost ). Funkcja ma zwróci ć przybliżoną wartość całkę funkcji f w przedziale  od x0 do x1.  Dla przypomnienia - całka to pole pod wykresem. Można ją przybliżyć sumując pola prostokątów o bokach <wartość_funkcji> na <przyrost>.
+
+W main wylicz wartość całki dla:
+
+sinusa w przedziale [0,pi]
+
+funkcji liniowej y=x w tym samym przedziale (tę funkcję trzeba napisać).
+
+Dodatkowo za pomocą napisanej funkcji pokaż, że pole koła o promieniu 1 wynosi pi.
