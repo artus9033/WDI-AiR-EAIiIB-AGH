@@ -1,0 +1,28 @@
+Zadanie 1 (O)
+
+Należy napisać funkcję liczącą  średnią wartości z tablicy (x) oraz ich wariancję (w) wg wzorów (plik wzory).
+
+gdzie N-liczba elementów tablicy, xi - i-ty element tablicy Przydatna tu będzie funkcja len.
+Funkcja ma otrzymywać tablicę jako argument i zwracać obie obliczone wartości.
+
+Następnie napisz program, w którym do tablicy (listy) wpisywane są liczby z klawiatury - zacznij od pustej listy i dokładaj do niej elementy za pomocą append. Niech wpisanie 0 kończy dokładanie. Wywołaj napisaną funkcję z tą tablicą i wypisz uzyskane wyniki w postaci:
+Średnia wynosi: ..., wariancja wynosi: ...
+Następnie jeszcze dwukrotnie wywołaj napisaną funkcję z tablicami [3,3,3,3] oraz [5,6,7,8,9] i ponownie wypisz uzyskane wyniki
+Zadanie 2 (O)
+
+Napisz funkcję, która zamieni napis zawierający ciąg cyfr (czyli liczbę ale zapisaną jako string) na napis 'słowny' (np. '1410' na 'jeden cztery jeden zero '). Znaki inne niż cyfry należy pomijać. Należy wykorzystać słownik zawierający liczebniki ('zero', 'jeden', itd). Funkcja ma zwracać stworzony napis.
+
+Zadanie 3 (O)
+
+Napisz funkcję, która dla listy dwuelementowych krotek zwróci nową listę zawierającą sumy elementów tych krotek - np. dla listy [(1,2),(3,4),(5,6),(7,8)] ma stworzyć [3,7,11,15]
+Funkcja ma zwracać stworzoną listę.
+
+Zadanie 4
+
+Napisz funkcję, która otrzymuje napis zawierający słownie opisaną liczbę z zakresu 20-59 (np. 'dwadzieścia jeden') i zamienia ją na 'prawdziwą' liczbę całkowitą (21). Wykorzystaj słownik. Może być przydatna funkcja split (napis.split()) dzieląca napis na wyrazy. Funkcja ma zwrócić wyliczoną liczbę. 
+
+Zadanie 5
+
+Dana jest "książka telefoniczna" w postaci słownika:
+książka = {('Jan', 'Kowalski'):"123456789", ('Adam', 'Nowak'):"987654321" , ('Adam', 'Kowalski'): "600300900"}
+Wypisz numer telefonu Jana Kowalskiego Napisz funkcję, która zwróci listę numerów telefonu wszystkich osób o podanym jako parametr nazwisku i użyj jej do wypisania numerów obu Kowalskich.
