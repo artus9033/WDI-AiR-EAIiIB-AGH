@@ -1,0 +1,63 @@
+UWAGA: 'Kod główny' we wszystkich zadaniach ma zostać umieszczony w funkcji main!
+1. Suma listy (O)
+
+Napisz rekurencyjną funkcję sumującą elementy listy liczb całkowitych. Funkcja jako parametr otrzymuje listę i zwraca jej sumę. Proszę o 2 wersje - 'zwykła' rekurencja i ogonowa.  W main-ie wywołaj obie funkcje na przykładowych tablicach, wypisując wyniki:
+
+[1,2,3,4]
+
+[ ]
+
+2. Wariancja (O)
+
+Spróbujmy połączyć obie metody rekurencji, 'zwykłą' i ogonową, w jednej funkcji. Niech to będzie rekurencyjna wersja funkcji liczącej średnią i wariancję. Niech średnia będzie liczona jak w rekurencji ogonowej (w trakcie schodzenia 'w głąb'), a wariancja przy powrotach 'w górę'. Funkcja powinna mieć 3 parametry: listę, długość listy oraz sumę (do wyliczenia średniej, ustawiona na początku na 0).  Tak więc liczenie średniej może być identyczne jak ogonowe liczenie sumy elementów listy w poprzednim zadaniu. Jedynie na koniec, kiedy lista będzie pusta, należy zamiast zwrócenia sumy zwrócić krotkę: sumę podzieloną przez długość oraz 0 początkujące zliczanie sumy kwadratów.  Natomiast zliczanie wariancji przebiega jak liczenie sumy w rekurencji zwykłej, tyle, że sumujemy kwadraty różnic dzielone przez długość i zwracamy krotkę: (średnia, dotychczasowa wariancja). 
+
+W main-ie  dwukrotnie wywołaj napisaną funkcję z listami  [3,3,3,3] oraz [5,6,7,8,9] i wypisz uzyskane wyniki
+
+
+
+Zadanie nadobowiązkowe:
+
+Proszę 'obudować' napisaną funkcję pisząc funkcję z jednym parametrem (lista) - tak jak to było w zadaniu Wariancja z tematu 4. Ta funkcja jedynie wywoła funcję rekurencyjną z odpowiednim argumentem długość oraz zwróci jej wynik. W tym podejściu można także nieco zoptymalizować funkcję rekurencyjną - zamiast wielokrotnie dzielić składowe wariancji przez długość można raz podzielić wynik funkcji rekurencyjnej (zoptymalizowana funkcja rekurencyjna będzie zliczać tylko sumę kwadratów).
+
+
+
+3. QuickSort (O)
+
+Zaimplementuj poniższy algorytm w postaci funkcji otrzymującej listę liczb i zwracającej listę posortowaną:
+
+weź p - pierwszy element listy
+dla każdego elementu listy  (poza pierwszym)              
+   jeżeli     element<p to umieść go w liście "mniejsze"
+   jeśli nie to umieść go w liście "większe"
+powtórz powyższe działania na listach "mniejsze" i "większe"  
+zwróć konkatenację list: "mniejsze, [p] i "większe"
+
+Zaproponuj warunek stopu dla powyższej rekurencji
+
+W mainie posortuj listę:
+
+[7,6,9,3,1,5,7,12,8]
+
+4. MergeSort
+
+Zaimplementuj sortowanie przez scalanie w wersjach: rekurencyjnej (łatwiejsza) i iteracyjnej (trudniejsza).
+
+Zacznij od stworzenia funkcji scalajacej (może być iteracyjna), która z dwóch posortowanych list stworzy (i zwróci) jedną. Ta funkcja będzie przydatna w obu wersjach.
+
+
+Przykładowa wersja rekurencyjna:
+
+Jeśli się da podziel listę na 2 części
+   Dla każdej z części wywołaj funkcję tę rekurencyjne
+  Scal (funkcją scalającą) posortowane części i zwróć posortowaną tablicę
+jeśli nie - zwróć listę (będzie miała 1 element)
+
+
+Przykładowa wersja iteracyjna:
+
+Powycinaj z listy jednoelementowe podlisty i scal je parami (funkcją scalajacą) tworząc posortowane listy dwuelementowe, które konkatenuj w jedną listę.  W kolejnej iteracji z tej listy powycinaj podlisty dwuelementowe  tworząc posortowane czwórki … itd. aż  do posortowania całej tablicy. Dla uproszczenia załóżmy, że liczba elementów w sortowanej tablicy jest potęgą 2.
+
+
+W mainie posortuj listę:
+
+[7,6,9,3,1,5,712]
