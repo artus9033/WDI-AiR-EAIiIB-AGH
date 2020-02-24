@@ -1,0 +1,77 @@
+Zadanie 1 (O)
+
+Napisz program wyliczający silnię: n! = 1*2*...*n
+
+Pamiętaj, że 0! = 1! = 1.
+
+Program powinien działać w pętli, wyliczając silnie podawanych z klawiatury liczb aż do podania liczby 0 lub 1. W zadaniu należy wykorzystać pętle while.
+
+Zadanie 2 (O)
+
+Napisz program wypisujący tabliczkę mnożenia 10x10 w postaci jak poniżej:
+
+   |  1  2  3  4  5  6  7  8  9 10
+---------------------------------
+ 1 |  1  2  3  4  5  6  7  8  9 10
+ 2 |  2  4  6  8 10 12 14 16 18 20
+ 3 |  3  6  9 12 15 18 21 24 27 30
+itd.
+Liczby powinny być w kolumnach z wyrównaniem do prawej. W wersji uproszczonej można pominąć "ozdobniki" (linie oraz numery kolumn i wierszy).
+
+Przykłady formatowania wydruku w Pythonie:
+
+print("Liczba na dziewięciu pozycjach: {:9d}".format(5) )  wypisze:
+
+Liczba na dziewięciu pozycjach:         5
+
+print("Liczba na trzech pozycjach uzupełniona zerami {:03d}".format(5) ) wypisze:
+
+Liczba na trzech pozycjach uzupełniona zerami: 005
+
+print("Liczba z dwoma miejscami po przecinku: {:.2f}".format(5) ) wypisze:
+
+Liczba z dwoma miejscami po przecinku: 5.00
+
+
+
+Alternatywny, 'stary', zapis powyższych przykładów:
+
+print("Liczba na dziewięciu pozycjach: %9d" %5 )
+
+print("Liczba na trzech pozycjach uzupełniona zerami %03d" % 5 )
+
+print("Liczba z dwoma miejscami po przecinku: %.2f"% 5 ):
+
+Aby wypisywać liczby kilkoma printami w jednym wierszu należy ustawić dodatkowy parametr funkcji print - end:
+
+print( 5, end="")
+
+print(6, end="")
+
+wypisze:
+
+56
+
+Zadanie 3 (O)
+
+Napisz program rysujący "choinkę" jak poniżej:
+
+     *
+    ***
+   *****
+  *******
+ *********
+***********
+Liczba poziomów powinna być pobierana z klawiatury. Pierwsza gwiazdka w ostatnim rzędzie powinna znaleźć się w pierwszej kolumnie wiersza konsoli (stykać się z ramką). Proszę nie używać mnożenia napisu przez liczbę
+
+Zadanie 4
+
+Napisz program znajdujący wszystkie możliwości złożenia 100zł z nominałów 2, 5 oraz 10 zł. Należy wypisać liczbę możliwych kombinacji.
+
+Podpowiedź: Użyj brutalnej siły (brute force), czyli sprawdź wszystkie kombinancje :)
+
+Zadanie 5
+
+Napisz program znajdujący (i wypisujący) wszystkie liczby pierwsze z zakresu 2-99. Wykorzystaj dwie pętle for z czego jedna ma być typu for-else.
+
+Podpowiedź: liczba pierwsza nie dzieli się bez reszty przez żadną liczbę mniejszą od niej.
