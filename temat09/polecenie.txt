@@ -1,0 +1,46 @@
+1. isElement (O)
+
+Napisz funkcję:
+
+char * isElement(char *tab, char znak);
+
+która sprawdza czy znak znak znajduje się w napisie tab, i zwraca wskazanie na pierwszy znaleziony element tablicy lub NULL w wypadku nieznalezienia. Użyj funkcji w programie głównym - zadeklaruj tablicę o nazwie napis (o wybranym przez siebie rozmiarze), wczytaj zawartość za pomocą fgets (patrz niżej) i wywołaj funkcję isElement z tą tablicą i wybranym przez siebie znakiem. W main-ie należy wypisać zawartość pamięci wskazywanej przez zwrócony przez funkcję wskaźnik lub komunikat o nieznalezieniu znaku, kiedy zwrócony wskaźnik na wartość NULL.
+
+Deklaracja funkcji fgets:  char * fgets(char *tablica, int rozmiar_tablicy, FILE *strumien_danych).
+
+Przykładowe wczytanie napisu do 10-cio elementowej tablicy tab z użyciem fgets:
+
+fgets(tab, 10, stdin);
+ stdin jest nazwą stałej reprezentującej standardowe wejście - zazwyczaj klawiaturę.
+
+2. Mnożenie macierzy (O)
+
+Napisz program mnożący dwie macierze liczb rzeczywistych (tablice 2-wymiarowe) o rozmiarach ROW1xCOL1 i ROW2xCOL2 (do zdefiniowania przez #define - przy czym: #define COL1 musi być równe ROW2). Wynikiem ma być trzecia macierz o rozmiarze ROW1xCOL2. Elementy macierzy wynikowej to iloczyn skalarny wiersza pierwszej macierzy przez kolumnę drugiej macierzy. Zawartość mnożonych macierzy należy podać przy deklaracji, można to zrobić zgodnie z przykładem "Obliczanie_z_definicji" ze strony: Wikipedii (pozwoli to sprawdzić wynik). Po obliczeniach wypisz macierz wynikową.
+
+3. Palindrom
+
+Napisz rekurencyjną funkcję, która sprawdza, czy podany napis jest palindromem (czyta się tak samo od początku jak i od końca - np. 'ala', 'kobylamamalybok' itp.). Funkcja ma zwrócić 0 kiedy napis nie jest, a 1 kiedy jest palindromem. Funkcja ma mieć dwa parametry: napis (czyli char *)  i długość napisu.
+4. Usuwanie litery
+Napisz funkcję, która z podanego napisu usunie wszystkie wystąpienia podanej litery (USUNIE a NIE zamieni na np. spacje). Zmodyfikowany tekst ma być zapamiętany w miejscu starego bez użycia tablicy pomocniczej. Nie wolno użyć funkcji strlen, ani w inny sposób obliczać długości napisu. Funkcja otrzymuje napis i usuwany znak, nic nie zwraca.
+
+W main zademonstruj działanie funkcji usuwając z napisu "Zaawansowane techniki programowania " wszystkie litery 'a'.
+
+Napis można wypisać funkcją puts (deklaracja: int puts(char *tablica)).
+
+5. isEqual
+
+
+
+Napisz funkcję:
+
+int isEqual(char* str1, char* str2);
+
+która sprawdza czy podane dwa ciągi znaków (napisy) są identyczne. Funkcja ma zwrócić true lub false. Ponieważ język C  nie ma typu Boolean zdefiniowanego wprost, należy zdefiniować true i false we własnym zakresie lub zainkludować "stdbool.h".
+
+Użyj funkcji w programie głównym - sprawdź działanie funkcji na następujących parach napisów (należy wypisywać odpowiedni komunikat w zależności od rezultatu działania funkcji):
+
+"Ala ma kota",  "Ala ma kota"
+
+"Ala ma",  "Ala ma kota"
+
+"Ala ma kota",  "Ala ma"
