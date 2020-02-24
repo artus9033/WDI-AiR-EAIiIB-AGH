@@ -1,0 +1,26 @@
+Zadanie 1 (O)
+
+Napisz program obliczający pole koła na postawie promienia. Program ma pobierać promień od użytkownika "z klawiatury". W obliczeniach proszę użyć zmiennych rzeczywistych. Jako Pi można przyjąć wartość 3.14
+
+Zadanie 2 (O)
+
+Napisz program sumujący kwadraty 10 kolejnych liczb naturalnych (od 1 do 10). W zadaniu należy wykorzystać pętlę for.
+
+Zadanie 3 (O)
+
+Napisz program wypisujący najmniejszą liczbę z 10 liczb wpisanych z klawiatury. W zadaniu należy wykorzystać pętlę for oraz NIE należy używać struktur danych typu lista, tablica.
+
+Zadanie 4
+
+Napisz program, który wylosuje liczbę całkowitą z zakresu 1-10 a następnie pozwoli na zgadnięcie tej liczby w 3 próbach. Program ma podawać po każdej nieudanej próbie, czy podana liczba jest większa czy mniejsza od wylosowanej. Po osiągnięciu zadanej liczby nieudanych prób program ma wypisać komunikat o porażce, a w wypadku zgadnięcia, komunikat o sukcesie. W programie należy użyć pętli while z instrukcją else.
+
+Przykład losowania liczb w Pythonie (do przerobienia i wykorzystania):
+
+import random
+
+for i in range(5):
+    print (random.randint(1, 10))
+
+Zadanie DODATKOWE
+
+Napisz program przeliczający podawaną z klawiatury liczbę sekund na zapis godziny:minuty:sekundy.
