@@ -1,0 +1,68 @@
+Zadanie 1 (O)
+
+Napisz funkcję tworzącą listę wszystkich lat przestępnych z podanego przedziału. Przypominam, że rok jest przestępny, jeżeli jest podzielny przez 4, ale nie jest podzielny przez 100, chyba, że jest podzielny przez 400. Ciało funkcji ma się składać z jednej linijki kodu zawierającej list comprehension.
+Wywołaj napisaną funkcję do wygenerowania listy lat przestępnych w latach 1900-2000.
+
+Uzupełnienie wykładu:
+
+W list comprehension może też wystąpić warunek np.:
+
+[x**2 for x in range (10) if x % 2 == 0 or x % 3 == 0]
+
+stworzy listę kwadratów tych liczb z przedziału 0-9, które są podzielne przez2 lub przez 3
+
+Zadanie 2 (O)
+Napisz funkcję derivative, która otrzyma jako parametry funkcję (f), punkt (x) i przyrost (h), a zwróci przybliżoną wartość pochodnej funkcji f w punkcie x. Przybliżoną wartość pochodnej uzyskuje się ze wzoru na iloraz różnicowy:
+
+f(x+h)−f(x)h
+
+
+
+Niech w funkcji derivative h będzie parametrem z wartością domyślną równą 0.0001
+
+W programie wypisz wartości funkcji:
+
+sin(x) w punkcie 1
+
+sin(x) w punkcie 0
+
+x^2 w punkcie 1 z przyrostem 0.00001
+
+Funkcja sin jest dostępna w module math (należy zaimportować moduł przez:
+
+import math
+
+- wtedy funkcja sin będzie dostępna jako math.sin
+
+Funkcję x^2 należy zaimplementować samemu.
+
+Zadanie 3
+
+Napisz funkcję znajdującą wspólne elementy dwóch sekwencji (list, krotek lub napisów). Znalezione wspólne elementy mają być zwracane jako lista (każdy element w tej liście ma wystąpić tylko raz!)
+
+Uzupełnienie wykładu:
+
+W list comprehension może wystąpć pętla zagnieżdżona np.:
+
+[x**y for x in range (1,4) for y in range (2,5) ]
+
+stworzy listę liczb będących 2, 3 i 4 potęgą  liczb z zakresu 1-3
+
+
+Zadanie 4
+
+Napisz funkcję wyznaczającą miejsce zerowe dowolnej funkcji f(x), w zadanym przedziale, metodą bisekcji. Funkcja powinna otrzymywać jako parametry funkcję f, x1, x2 jako początek i koniec przedziału w którym należy szukać miejsca zerowego oraz eps - dokładność obliczeń
+
+
+Za pomocą napisanej funkcji należy wyznaczyć miejsce zerowe:
+
+sinusa w przedziale (-1.5 , 1) oraz
+
+wielomianu (funkcja do samodzielnego napisania):
+
+y=x^3-2x^2+4x-1                 w przedziale (-10, 10) - z dokładnością 0.001
+
+
+Zadanie 5
+
+Napisz dekorator w postaci funkcji pozwalający na policzenie czasu wykonania podanej funkcji. Należy wykorzystać funkcję time.clock() z modułu time (wywołaj clock() przed wywołaniem funkcji oraz po wywołaniu funkcji i wypisz różnicę czasów). 'Udekoruj' funkcję z zadania 2.  Do moodla wystarczy wkleić kod dekoratora.

@@ -1,0 +1,42 @@
+1. Fibonacci (O)
+
+Napisz funkcję (rekurencyjną) liczenia n-tego elementu ciągu Fibonacciego.
+
+2. Symbol Newtona (O)
+
+
+Napisz funkcję rekurencyjną obliczającą wartość symbolu Newtona
+
+n po k dla n>=k>=0.
+
+Skorzystaj z zależności:
+
+wzor rekurencyjny dla n,k>0.
+
+n po k wynosi 1 dla k=0 lub k=n
+
+3. Liczby rzymskie
+
+Napisz 3 warianty funkcji, która przeliczy wprowadzoną liczbę rzymską (jako napis) na jej postać dziesiętną. Pierwszy wariant ma być iteracyjny, drugi używać klasycznej rekurencji (funkcja z jednym parametrem), a trzeci - rekurencji ogonowej (funkcja z dwoma parametrami).
+
+
+
+Wykorzystaj słownik:
+rzym = { 'M':1000, 'CM':900, 'D':500, 'CD':400, 'C':100, 'XC':90, 'L':50, 'XL':40, 'X':10, 'IX':9, 'V':5, 'IV':4, 'I':1 }
+
+Przykładowe dwie propozycje algorytmu zamiany:
+- Pierwszy algorytm: Bierzemy z napisu DWA kolejne znaki i sprawdzamy czy taki dwuznakowy 'wyraz' występuje w słowniku, jeśli tak, to dodajemy do sumy wartość tego klucza/'wyrazu'. Jak nie to do sumy dodajemy wartość pierwszego znaku z 'wyrazu'.
+- Drugi algorytm: Bierzemy z napisu DWA kolejne znaki i sprawdzamy ich wartości w słowniku. Jeżeli wartość pierwszego znaku jest większa lub równa wartości drugiego to dodajemy ją do sumy. Jeżeli jest mniejsza to ją odejmujemy.
+
+4. Liczba binarna
+
+Napisz funkcję rekurencyjną wypisującą podaną liczbę całkowitą nieujemną w postaci binarnej. Funkcja ma wypisywać 0 lub 1 w zależności od ustawienia analizowanych bitów.
+
+5. Wieże Hanoi
+
+
+Napisz program rozwiązujący problem Wież Hanoi. Zaimplementuj rozwiązanie w postaci funkcji rekurencyjnej:
+
+1) przenieś N-1 górnych krążków z palika początkowego na palik pomocniczy,
+2) przenieś N-ty krążek na palik docelowy,
+3) przenieś N-1 górnych krążków z palika pomocniczego na docelowy.
