@@ -6,9 +6,9 @@
 
 Kilka reguł dotyczących obsługi repo:
 
-- Zadania z danego tematu `tematX`, gdzie `X` to nr zestawu, umieszczamy w katalogu o tejże nazwie
+- Zadania z danego tematu `tematXX`, gdzie `XX` to nr zestawu (z suffixem '0', jeżeli liczba jest jednocyfrowa), umieszczamy w katalogu o tejże nazwie
 - Rozwiązanie do danego zadania należy umieścić w pliku `<nazwa zadania>.py`, z ewentualnym dopiskiem, jeśli jest to kompletnie inna wersja rozwiązania danego problemu (podobne rozwiązania można ulepszać, modyfikować itd. poprzez PRy)
-- Opis zadania powinien znaleźć się w pliku `tematX - opisy rozwiązań.docx`, gdzie `X` to nr zestawu, umieszczonym rzecz jasna w katalogu `tematX` z odpowiedniego tematu
+- Opis zadania powinien znaleźć się w pliku `tematXX - opisy rozwiązań.{docx,pdf}`, gdzie `XX` to nr zestawu (z suffixem '0', jeżeli liczba jest jednocyfrowa), umieszczonym rzecz jasna w katalogu `tematX` z odpowiedniego tematu
 - Wszystkie nazwy plików powinny być zgodne z konwencją [camelCase](https://pl.wikipedia.org/wiki/CamelCase)
 - Zachęca się do zgłaszania nowych rozwiązań poprzez pull requesty i komentowanie/ocenianie ich przed ewentualnym merge
 
