@@ -1,0 +1,104 @@
+UWAGA: 'Kod główny' we wszystkich zadaniach ma zostać umieszczony w funkcji main!
+Szablon programu w C:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("To ja, Twój pierwszy program!\n");
+    return 0;
+}
+
+
+
+1. Pierwiastek w pętli (O)
+
+Napisz program, który w pętli do-while będzie wczytywał z klawiatury liczbę i wypisywał jej pierwiastek kwadratowy (każdy obrót pętli to wczytanie liczby i wypisanie jej pierwiastka). Program powinien działać aż do podania liczby 0 lub 1. 
+
+Do obliczania pierwiastka należy użyć funkcji sqrt z biblioteki matematycznej. W tym celu trzeba w kodzie załączyć plik nagłówkowy #include <math.h>  - funkcja sqrt ma tam deklarację (nie trzeba jej wpisywać do programu, zamieszczona deklaracja ma tylko pokazać czego funkcja oczekuje i co zwraca):
+
+double sqrt(double x);
+Przykład użycia funkcji sqrt w programie (x i y trzeba wcześniej zadeklarować):
+
+y = sqrt(x);
+ 
+2. Kalkulator (O)
+
+Napisz prosty kalkulator z czterema działaniami (+, -, *, /). Należy wykorzystać instrukcję switch . Operatory powinny być wprowadzane PRZED liczbami w postaci znaków (+, -, *, /) np. + 5 7. Proszę uwzględnić problem dzielenia przez zero i podania innego znaku niż (+, -, *, /) .
+
+
+3. Potęga (O)
+
+Napisz funkcję obliczającą n-tą potęgę podanej liczby. Zakładamy, że n ma być nieujemne. Proponowany nagłówek funkcji:
+double power(double x, int n);
+
+Oczywiście nie wolno używać funkcji z biblioteki matematycznej  liczącej potęgę - pow( ). Mamy właśnie napisać naszą wersję tej funkcji.
+
+W funkcji należy użyć pętlę for. 
+
+
+W main-ie wylicz (i wypisz) 3 do potęgi 2 i 2 do potęgi 4.
+
+
+
+4. BubbleSort (O)
+
+Napisz funkcję sortującą tablicę metodą bąbelkową.
+
+Dla przypomnienia: metoda bąbelkowa polega na porównywaniu dwóch kolejnych elementów i zamianie ich kolejności, jeżeli nie zgadza się porządek, w jakim się sortuje tablicę. Sortowanie kończy się, gdy podczas kolejnego przejścia nie dokonano żadnej zmiany.
+
+np.:
+
+Ciąg wejściowy: |4|2|5|1|7|
+
+^-^ oznacza aktualnie porównywane komórki
+
+Każdy wiersz symbolizuje wypchnięcie kolejnego największego elementu na koniec ("wypłynięcie największego bąbelka").
+
+|4|2|5|1|7| -> |2|4|5|1|7| -> |2|4|5|1|7| -> |2|4|1|5|7|
+ ^-^              ^-^              ^-^              ^-^
+|2|4|1|5|7| -> |2|4|1|5|7| -> |2|1|4|5|7|
+ ^-^              ^-^              ^-^
+|2|1|4|5|7| -> |1|2|4|5|7| -> 
+ ^-^              ^-^
+|1|2|4|5|7| 
+ ^-^          
+Każdy powyższy wiersz pokazuje przebieg pętli po elementach tablicy.  Kolejne wiersze pokazują, że tę pętlę należy powtarzać (czyli umieścić w pętli zewnętrznej). Jak widać pętla wewnętrzna będzie wykonywana za każdym razem o 1 powtórzenie krócej, gdyż po jej przebiegu na końcu tablicy powinien wylądować największy element , którego już nie trzeba przestawiać.
+
+Funkcja ma otrzymywać tablicę liczb całkowitych i jej rozmiar. Nie ma nic zwracać przez return (gdyż tablica zostanie posortowana 'w miejscu', czyli po powrocie z funkcji będzie ona zmieniona).  Proponowany nagłówek funkcji:
+  void bubble(int tab[ ], int size);
+
+Zastanów się, jak zamienić miejscami dwa elementy tablicy.
+
+W mainie posortuj tablicę:
+
+[7,6,9,3,1,5,7,12,8]
+
+i wypisz ją po sortowaniu;
+
+
+
+Tworzenie tablicy w C wraz z wypełnieniem jej danymi:
+
+#define ROZMIAR 9
+
+int tab[ROZMIAR]={7,6,9,3,1,5,7,12,8};
+
+
+
+5. Spirala
+
+Napisz program, który tablicę kwadratową ''tab'' (rozmiaru ''N x N'') wypełnia kolejnymi liczbami "jak w spirali". Stałą N należy definiować przez #define.
+
+np. dla N równego 4 powinno się uzyskać następujący wynik (kropki oznaczają spacje):
+
+ 1  2  3  4
+12 13 14  5
+11 16 15  6
+10  9  8  7
+
+
+6. Następny znak
+
+Napisz program, który wczyta znak (z alfabetu angielskiego) z klawiatury i wypisze na ekran znak następny, według alfabetu.
