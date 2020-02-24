@@ -1,0 +1,33 @@
+1. Dynamiczna tablica 2D (O)
+
+Napisz program zawierający następujące funkcje:
+double** createMatrix(int n);
+która tworzy macierz o wymiarze nxn. Fukcja zwraca utworzoną tablicę (macierz).
+W funkcji każdy wiersz ma być alokowany osobno. W funkcji należy użyć funkcji deleteMatrix() do 'posprzątania' w wypadku nieudanej alokacji.
+
+void fillMatrix(double** tab, int n);
+która otrzymuje macierz tab o wymiarze ''nxn'', a następnie wypełnia ją kolejnymi liczbami naturalnymi począwszy od 1.
+
+void printMatrix(double** tab, int n);
+która wypisuje na ekran macierz tab o wymiarze ''nxn''.
+
+void deleteMatrix(double*** a_tab, int n);
+która otrzymuje adres macierzy utworzonej przez funkcję createMatrix() i zwalnia zajmowaną przez macierz pamięć, a wskaźnik reprezentujący macierz ustawia na NULL.
+
+W programie (main) należy użyć  wymienionych powyżej funkcji do utworzenia tablicy o ustalonym przez siebie  rozmiarze, wypełnienia jej i zwolnienia całej przydzielonej pamięci po wypisaniu tablicy.
+
+
+2. Ciągła dynamiczna  tablica 2D
+Napisz funkcje:
+
+int createContinousMatrix(double*** atab, int n);
+która tworzy macierz o wymiarze nxn. Funkcja ma tworzyć macierz jako ciągły obszar pamięci (w odróźnieniu od funkcji createMatrix, gdzie każdy wiersz był alokowany osobno); wskaźniki wierszy mają zostać odpowiednio przekierowane. Funkcja stworzoną macierz ma 'wrzucić' pod otrzymany adres atab.  Funkcja zwraca 0 w wypadku powodzenia a -1 w wypadku błędu.
+
+void deleteContinousMatrix(double*** atab);
+która otrzymuje poprzez adres macierz utworzoną przez funkcję createContinousMatrix() i zwalnia zajmowaną przez macierz pamięć, a wskaźnik reprezentujący tablicę ustawia na NULL.
+
+int copyMatrix(double*** pdest, double** src, int n);
+która tworzy tablicę 'dest ', kopiuje do niej zawartość tablicy ''src'' i "wrzuca" "dest" pod przekazany adres. Obie tablice są wymiaru ''nxn''.
+W funkcji należy użyć funkcji createContinousMatrix(). Funkcja zwraca 0 w wypadku powodzenia a -1 w wypadku błędu.
+
+W programie należy stworzyć tablicę, wypełnić ją za pomocą fillMatrix z poprzedniego punktu,  stworzyć drugą tablicę za pomocą copyMatrix, wypisać drugą tablicę za pomocą printMatrix (też z poprzeniego punktu).  Proszę pamiętać o zwolnieniu całej przydzielonej pamięci.
