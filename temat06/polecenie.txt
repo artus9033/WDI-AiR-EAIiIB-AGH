@@ -15,7 +15,16 @@ wzor rekurencyjny dla n,k>0.
 
 n po k wynosi 1 dla k=0 lub k=n
 
-3. Liczby rzymskie
+3. Suma Listy
+
+Napisz rekurencyjną funkcję sumującą elementy listy liczb całkowitych. Funkcja jako parametr otrzymuje listę i zwraca jej sumę. Proszę o 2 wersje - 'zwykła' rekurencja i ogonowa.  W main-ie wywołaj obie funkcje na przykładowych listach, wypisując wyniki dla poniższych dwóch list (druga jest listą pustą):
+
+[1,2,3,4]
+
+[ ]
+
+5. Rzymskie
+
 
 Napisz 3 warianty funkcji, która przeliczy wprowadzoną liczbę rzymską (jako napis) na jej postać dziesiętną. Pierwszy wariant ma być iteracyjny, drugi używać klasycznej rekurencji (funkcja z jednym parametrem), a trzeci - rekurencji ogonowej (funkcja z dwoma parametrami).
 
@@ -32,7 +41,7 @@ Przykładowe dwie propozycje algorytmu zamiany:
 
 Napisz funkcję rekurencyjną wypisującą podaną liczbę całkowitą nieujemną w postaci binarnej. Funkcja ma wypisywać 0 lub 1 w zależności od ustawienia analizowanych bitów.
 
-5. Wieże Hanoi
+ Wieże Hanoi  (2019)
 
 
 Napisz program rozwiązujący problem Wież Hanoi. Zaimplementuj rozwiązanie w postaci funkcji rekurencyjnej:
