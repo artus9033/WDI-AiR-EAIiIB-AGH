@@ -1,11 +1,13 @@
 UWAGA: 'Kod główny' we wszystkich zadaniach ma zostać umieszczony w funkcji main!
-1. Suma listy (O)
+1. Fibonacci ogonowo
 
-Napisz rekurencyjną funkcję sumującą elementy listy liczb całkowitych. Funkcja jako parametr otrzymuje listę i zwraca jej sumę. Proszę o 2 wersje - 'zwykła' rekurencja i ogonowa.  W main-ie wywołaj obie funkcje na przykładowych tablicach, wypisując wyniki:
+Uruchom program liczący n-ty element ciągu Fibonacciego z poprzednich ćwiczeń do policzenia 37-ego elementu tego ciągu. Zwróć uwagę na czas obliczeń, Spróbuj ile jeszcze elementów jesteś w stanie policzyć w akceptowalnym czasie (38, 39, 40 ....).
+Winien jest algorytm - każde uruchomienie funkcji wywołuje 2 kolejne wywołania - czas obliczeń rośnie wykładniczo. W dodatku obliczenia powtarzają się:
+F(5)=F(4)+F(3)
+F(4)=F(3)+F(2)  -- tu F(3) liczone jest powtórnie.
 
-[1,2,3,4]
-
-[ ]
+Lepszym algorytmem będzie ogonowa wersja funkcji, która będzie potrzebowała dwa dodatkowe parametry (aby zapamiętać n-1-wszy  i n-2-gi element ciągu.
+Przetestuj funkcję dla wartości z początku ćwiczenia (38, 39, 40 ....).
 
 2. Wariancja (O)
 
