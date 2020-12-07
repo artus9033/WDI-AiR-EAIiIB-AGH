@@ -1,8 +1,8 @@
-# WDI-AiR-AGH-2019
+# WDI-AiR-EAIiIB-AGH
 
 > Jak będzie na WDI AiR - sekcja O(n!)
 
-### Celem tego repo jest umieszczanie rozwiązań z _WDI z 2019_ od dr inż. Pawlika.
+### Celem tego repo jest umieszczanie rozwiązań z _WDI_
 
 Kilka reguł dotyczących obsługi repo:
 
