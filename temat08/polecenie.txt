@@ -41,16 +41,8 @@ W funkcji należy użyć pętlę for.
 W main-ie wylicz (i wypisz) 3 do potęgi 2 i 2 do potęgi 4.
 
 
-4. Usuwanie litery (O)
-Napisz funkcję, która z podanego napisu usunie wszystkie wystąpienia podanej litery (USUNIE a NIE zamieni na np. spacje). Zmodyfikowany tekst ma być zapamiętany w miejscu starego bez użycia tablicy pomocniczej. Nie wolno użyć funkcji strlen, ani w inny sposób obliczać długości napisu. Funkcja otrzymuje napis i usuwany znak, nic nie zwraca.
 
-W main zademonstruj działanie funkcji usuwając z napisu "Zaawansowane techniki programowania " wszystkie litery 'a'.
-
-Napis można wypisać funkcją puts (deklaracja: int puts(char *tablica)).
-
-
-
-5. BubbleSort 
+4. BubbleSort (O)
 
 Napisz funkcję sortującą tablicę metodą bąbelkową.
 
@@ -95,5 +87,18 @@ int tab[ROZMIAR]={7,6,9,3,1,5,7,12,8};
 
 
 
+5. Spirala
+
+Napisz program, który tablicę kwadratową ''tab'' (rozmiaru ''N x N'') wypełnia kolejnymi liczbami "jak w spirali". Stałą N należy definiować przez #define.
+
+np. dla N równego 4 powinno się uzyskać następujący wynik (kropki oznaczają spacje):
+
+ 1  2  3  4
+12 13 14  5
+11 16 15  6
+10  9  8  7
 
 
+6. Następny znak
+
+Napisz program, który wczyta znak (z alfabetu angielskiego) z klawiatury i wypisze na ekran znak następny, według alfabetu.

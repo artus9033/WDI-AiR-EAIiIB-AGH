@@ -7,24 +7,9 @@ ax2+bx+c = 0
 zawołaj napisaną funkcję i  wypisz rozwiązania tego równania.  Funkcja ma zwracać (przez return) liczbę znalezionych miejsc zerowych. Ponadto, oprócz parametrów a, b, i c funkcja ma mieć dwa dodatkowe parametry wyjściowe - wskaźniki otrzymujące adresy zmiennych pod które funkcja będzie 'wrzucać' znalezione pierwiastki. Przypominam, że nie wolno używać zmiennych globalnych. Zmienne przechowujące pierwiastki powinny być typu rzeczywistego.
 
 
-2. Znajdowanie znaku w napisie (O)
+2. Odwracanie tablicy (O)
 
-Napisz funkcję:
-
-char * znajdz_znak(char *napis, char szuk_znak);
-
-która szuka  znaku szuk_znak w napisie (tablicy) napis, i zwraca adres pierwszego znalezionego znaku (elementu tablicy) lub NULL w wypadku nieznalezienia.
-
-Użyj funkcji w programie głównym - zadeklaruj tablicę o wybranym przez siebie rozmiarze (rozmiar zdefiniuj za pomocą #define, pamiętając o wielkich literach), wczytaj zawartość z klawiatury za pomocą fgets (patrz niżej) i wywołaj funkcję znajdz_znak z tą tablicą i wybranym przez siebie znakiem.
-
-W main-ie należy wypisać zawartość pamięci znajdującej się  pod zwróconym przez funkcję adresem lub komunikat o nieznalezieniu znaku, kiedy zwrócony wskaźnik na wartość NULL. Przetestuj program raz wpisując napis zawierający szukaną literę, a drugi raz bez takiej litery.
-
-Deklaracja funkcji fgets:  char * fgets(char *tablica, int rozmiar_tablicy, FILE *strumien_danych).  Jako strumien_danych należy wpisać stdin - jest to standardowa globalna zmienna oznaczająca domyślnie klawiatuę.
-
-Przykładowe wczytanie napisu do 10-cio elementowej tablicy znaków tab z użyciem fgets:
-
-fgets(tab, 10, stdin);
-
+Napisz funkcję otrzymującą tablicę liczb rzeczywistych oraz adres ostatniego elementu tej tablicy (czyli parametrami funkcji są dwa wskaźniki). W funkcji -  używając wyłącznie dwóch parametrów oraz jednej zmiennej pomocniczej  odwróć tablicę 'w miejscu' tzn bez użycia drugiej tablicy. Funkcja nic nie zwraca.  W programie main zdefiniuj 10-cio elementową tablicę liczb rzeczywistych typu, odwróć ją za pomocą napisanej funkcji i wypisz po odwróceniu.
 
 3. Tablica napisów
 
@@ -35,4 +20,13 @@ Do wypisania tablicy mozna wykorzystać funkcję puts o deklaracji, wypisującą
 
 int puts(char *s);
 
+4. Całka
+Napisz funkcję wyliczającą całkę podanej funkcji w podanym przedziale. Funkcja  ma mieć jako parametry funkcję f (otrzymującą wartość typu double i zwracającą wynik tego samego typu), punkty poczatkowy (x0) i końcowy (x1)przedziału oraz przyrost ). Funkcja ma zwróci ć przybliżoną wartość całkę funkcji f w przedziale  od x0 do x1.  Dla przypomnienia - całka to pole pod wykresem. Można ją przybliżyć sumując pola prostokątów o bokach <wartość_funkcji> na <przyrost>.
 
+W main wylicz wartość całki dla:
+
+sinusa w przedziale [0,pi]
+
+funkcji liniowej y=x w tym samym przedziale (tę funkcję trzeba napisać).
+
+Dodatkowo za pomocą napisanej funkcji pokaż, że pole koła o promieniu 1 wynosi pi.
