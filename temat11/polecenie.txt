@@ -16,10 +16,3 @@ Kolejność działań funkcji: przydzielenie pamięci o 1 większej od n, przepi
 
 Napisz program który wczytuje znaki z klawiatury i zapisuje w dynamicznej tablicy. Koniec wczytywania jest sygnalizowany kropką. Po zakończeniu wczytywania program wypisuje wczytany napis. Rozmiar tablicy powinien na początku wynosić 10 znaków i być zwiększany po 10 znaków w miarę potrzeby.
 
-4. Zdanie na wyrazy
-
-Napisz funkcję dzielącą przekazane jej zdanie na wyrazy. Funkcja otrzymuje zdanie w postaci napisu. Najpierw musi ona policzyć ile jest wyrazów (ilość spacji + 1). Następnie ma stworzyć dynamicznie tablicę wskaźników na typ char o rozmiarze ilosc_wyrazów + 1. Kolejny krok to ponowne wyszukanie wyrazów w zdaniu, przy czym adres pierwszej litery wyrazu (czyli pierwszej litery po spacji) jest zapamiętywany w tablicy wskaźników, a spacje są zamieniane na znaki końca napisu ('\0'). Po ostatnim wyrazie funkcja ma umieścić w ostatnim elemencie tablicy wskaźników wartość NULL.
-
-Założenia upraszczające: napis zawiera przynajmniej jeden wyraz, wyrazy są rozdzielone pojedynczymi spacjami.
-
-W main należy stworzyć tablicę o rozmiarze 100 i wczytać do niej zdanie z klawiatury za pomocą funkcji fgets. Następnie wywołać funkcję i odebrać od niej tablicę wskaźników. Na koniec wypisać wszystkie wyrazy z tablicy wskaźników za pomocą puts. Proszę pamiętać o sprawdzaniu wyniku alokacji i zwalnianiu przydzielonej pamięci.
