@@ -1,0 +1,45 @@
+1. Iloczyn skalarny (O)
+
+Napisz funkcję liczącą iloczyn skalarny dwóch wektorów (tablic jednowymiarowych) liczb rzeczywistych. Funkcja ma otrzymać dwie tablice oraz ich rozmiar i zwrócić wartość ich iloczynu skalarnego (czyli sumy iloczynów odpowiadających sobie elementów - pierwszy razy pierwszy, drugi razy drugi itd.). W programie głównym wylicz i wypisz iloczyn skalarny wektorów (uwaga - ten zapis NIE jest zapisem w języku C):
+[1,2,3,4,5] i [6,7,8,9,10]
+[0,2,3] i [0,7,0] 
+Odpowiednie tablice wypełnij wartościami przy ich definiowaniu.
+
+2. Mnożenie macierzy (O)
+
+Napisz program mnożący dwie macierze liczb rzeczywistych (tablice 2-wymiarowe) o rozmiarach ROW1xCOL1 i ROW2xCOL2 (do zdefiniowania przez #define - przy czym: #define COL1 musi być równe ROW2). Wynikiem ma być trzecia macierz o rozmiarze ROW1xCOL2. Elementy macierzy wynikowej to iloczyn skalarny wiersza pierwszej macierzy przez kolumnę drugiej macierzy. Zawartość mnożonych macierzy należy podać przy deklaracji, można to zrobić zgodnie z przykładem "Obliczanie_z_definicji" ze strony: Wikipedii (pozwoli to sprawdzić wynik). Po obliczeniach wypisz macierz wynikową.
+
+3.Dodawanie macierzy (O)
+
+Napisz program (nie osobną funkcję) dodający do siebie dwie macierze z liczbami całkowitymi (tablice 2-wymiarowe) o rozmiarze ROWxCOL (ROW i COL do zdefiniowania przez #define - proszę oby liczba wierszy była różna od liczby kolumn). Wynikiem ma być trzecia macierz o tym samym rozmiarze. Element (i,j) macierzy wynikowej to suma elementów (i,j) dodawanych macierzy. Wartości sumowanych macierzy należy podać przy deklaracji (dowolne liczby całkowite). Macierz wynikową wypisz po sumowaniu wypisz macierz wynikową (w osobnych pętlach, nie przy wyliczaniu sum).
+
+4. isEqual
+
+
+
+Napisz funkcję:
+
+int isEqual(char* str1, char* str2);
+
+która sprawdza czy podane dwa ciągi znaków (napisy) są identyczne. Funkcja ma zwrócić true lub false. Ponieważ język C  nie ma typu Boolean zdefiniowanego wprost, należy zdefiniować true i false we własnym zakresie lub zainkludować "stdbool.h".
+
+Użyj funkcji w programie głównym - sprawdź działanie funkcji na następujących parach napisów (należy wypisywać odpowiedni komunikat w zależności od rezultatu działania funkcji):
+
+"Ala ma kota",  "Ala ma kota"
+
+"Ala ma",  "Ala ma kota"
+
+"Ala ma kota",  "Ala ma"
+
+
+5. Spirala
+
+
+Napisz program, który tablicę kwadratową ''tab'' (rozmiaru ''N x N'') wypełnia kolejnymi liczbami "jak w spirali". Stałą N należy definiować przez #define.
+
+np. dla N równego 4 powinno się uzyskać następujący wynik (kropki oznaczają spacje):
+
+ 1  2  3  4
+12 13 14  5
+11 16 15  6
+10  9  8  7

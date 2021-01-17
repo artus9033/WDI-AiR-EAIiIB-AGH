@@ -1,0 +1,18 @@
+1. Dynamiczna tablica (O)
+
+Napisz funkcję, która stworzy dynamicznie tablicę o długości podanej przez argument wywołania i zwróci adres zaalokowanej pamięci (czyli stworzoną tablicę). Ponadto w funkcji tablica powinna zostać wypełniona kolejnymi, nieparzystymi liczbami całkowitymi (począwszy od 1). Funkcję należy użyć w main-ie do utworzenia tablicy o rozmiarze podanym z klawiatury, następnie tablicę należy wypisać na ekranie. Proszę pamiętać o zwalnianiu pamięci przydzielonej dynamicznie.
+
+2. Powiększanie tablicy (O)
+
+Napisz funkcję
+float * add(float* tab, int n, float new_elem);
+która powiększa przekazaną  n-elementową tablicę o jeden element new_elem (umieszczany na końcu powiększonej tablicy). Funkcja zwraca powiększoną tablicę (adres nowo przydzielonej pamięci) lub NULL w wypadku niepowodzenia. Funkcja powinna zostać wywołana 10-krotnie w programie głównym (main) celem utworzenia tablicy 10-cio elementowej, która następnie ma zostać wypisana. W main wskaźnik, który stanie się powiększaną tablicą, należy ustawić wstępnie na NULL. W tworzonej funkcji proszę nie używać funkcji realloc().
+
+UWAGI:
+
+Kolejność działań funkcji: przydzielenie pamięci o 1 większej od n, przepisanie zawartości tablicy do nowo przydzielonego miejsca, zwolnienie pamięci tablicy (starej), zwrócenie wskaźnika na nowo przydzieloną pamięć (nowej tablicy).
+
+3.  Znaki z klawiatury
+
+Napisz program który wczytuje znaki z klawiatury i zapisuje w dynamicznej tablicy. Koniec wczytywania jest sygnalizowany kropką. Po zakończeniu wczytywania program wypisuje wczytany napis. Rozmiar tablicy powinien na początku wynosić 10 znaków i być zwiększany po 10 znaków w miarę potrzeby.
+
