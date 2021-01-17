@@ -1,19 +1,33 @@
-1. Iloczyn skalarny (O)
+1. isElement (O)
 
-Napisz funkcję liczącą iloczyn skalarny dwóch wektorów (tablic jednowymiarowych) liczb rzeczywistych. Funkcja ma otrzymać dwie tablice oraz ich rozmiar i zwrócić wartość ich iloczynu skalarnego (czyli sumy iloczynów odpowiadających sobie elementów - pierwszy razy pierwszy, drugi razy drugi itd.). W programie głównym wylicz i wypisz iloczyn skalarny wektorów (uwaga - ten zapis NIE jest zapisem w języku C):
-[1,2,3,4,5] i [6,7,8,9,10]
-[0,2,3] i [0,7,0] 
-Odpowiednie tablice wypełnij wartościami przy ich definiowaniu.
+Napisz funkcję:
+
+char * isElement(char *tab, char znak);
+
+która sprawdza czy znak znak znajduje się w napisie tab, i zwraca wskazanie na pierwszy znaleziony element tablicy lub NULL w wypadku nieznalezienia. Użyj funkcji w programie głównym - zadeklaruj tablicę o nazwie napis (o wybranym przez siebie rozmiarze), wczytaj zawartość za pomocą fgets (patrz niżej) i wywołaj funkcję isElement z tą tablicą i wybranym przez siebie znakiem. W main-ie należy wypisać zawartość pamięci wskazywanej przez zwrócony przez funkcję wskaźnik lub komunikat o nieznalezieniu znaku, kiedy zwrócony wskaźnik na wartość NULL.
+
+Deklaracja funkcji fgets:  char * fgets(char *tablica, int rozmiar_tablicy, FILE *strumien_danych).
+
+Przykładowe wczytanie napisu do 10-cio elementowej tablicy tab z użyciem fgets:
+
+fgets(tab, 10, stdin);
+ stdin jest nazwą stałej reprezentującej standardowe wejście - zazwyczaj klawiaturę.
 
 2. Mnożenie macierzy (O)
 
 Napisz program mnożący dwie macierze liczb rzeczywistych (tablice 2-wymiarowe) o rozmiarach ROW1xCOL1 i ROW2xCOL2 (do zdefiniowania przez #define - przy czym: #define COL1 musi być równe ROW2). Wynikiem ma być trzecia macierz o rozmiarze ROW1xCOL2. Elementy macierzy wynikowej to iloczyn skalarny wiersza pierwszej macierzy przez kolumnę drugiej macierzy. Zawartość mnożonych macierzy należy podać przy deklaracji, można to zrobić zgodnie z przykładem "Obliczanie_z_definicji" ze strony: Wikipedii (pozwoli to sprawdzić wynik). Po obliczeniach wypisz macierz wynikową.
 
-3.Dodawanie macierzy (O)
+3. Palindrom
 
-Napisz program (nie osobną funkcję) dodający do siebie dwie macierze z liczbami całkowitymi (tablice 2-wymiarowe) o rozmiarze ROWxCOL (ROW i COL do zdefiniowania przez #define - proszę oby liczba wierszy była różna od liczby kolumn). Wynikiem ma być trzecia macierz o tym samym rozmiarze. Element (i,j) macierzy wynikowej to suma elementów (i,j) dodawanych macierzy. Wartości sumowanych macierzy należy podać przy deklaracji (dowolne liczby całkowite). Macierz wynikową wypisz po sumowaniu wypisz macierz wynikową (w osobnych pętlach, nie przy wyliczaniu sum).
+Napisz rekurencyjną funkcję, która sprawdza, czy podany napis jest palindromem (czyta się tak samo od początku jak i od końca - np. 'ala', 'kobylamamalybok' itp.). Funkcja ma zwrócić 0 kiedy napis nie jest, a 1 kiedy jest palindromem. Funkcja ma mieć dwa parametry: napis (czyli char *)  i długość napisu.
+4. Usuwanie litery
+Napisz funkcję, która z podanego napisu usunie wszystkie wystąpienia podanej litery (USUNIE a NIE zamieni na np. spacje). Zmodyfikowany tekst ma być zapamiętany w miejscu starego bez użycia tablicy pomocniczej. Nie wolno użyć funkcji strlen, ani w inny sposób obliczać długości napisu. Funkcja otrzymuje napis i usuwany znak, nic nie zwraca.
 
-4. isEqual
+W main zademonstruj działanie funkcji usuwając z napisu "Zaawansowane techniki programowania " wszystkie litery 'a'.
+
+Napis można wypisać funkcją puts (deklaracja: int puts(char *tablica)).
+
+5. isEqual
 
 
 
@@ -30,16 +44,3 @@ Użyj funkcji w programie głównym - sprawdź działanie funkcji na następują
 "Ala ma",  "Ala ma kota"
 
 "Ala ma kota",  "Ala ma"
-
-
-5. Spirala
-
-
-Napisz program, który tablicę kwadratową ''tab'' (rozmiaru ''N x N'') wypełnia kolejnymi liczbami "jak w spirali". Stałą N należy definiować przez #define.
-
-np. dla N równego 4 powinno się uzyskać następujący wynik (kropki oznaczają spacje):
-
- 1  2  3  4
-12 13 14  5
-11 16 15  6
-10  9  8  7
